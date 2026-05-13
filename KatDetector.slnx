@@ -1,0 +1,11 @@
+﻿<Solution>
+  <Project Path="KatDetector.Android/KatDetector.Android.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="KatDetector.Browser/KatDetector.Browser.csproj" />
+  <Project Path="KatDetector.Desktop/KatDetector.Desktop.csproj" />
+  <Project Path="KatDetector.iOS/KatDetector.iOS.csproj">
+    <Deploy />
+  </Project>
+  <Project Path="KatDetector/KatDetector.csproj" />
+</Solution>

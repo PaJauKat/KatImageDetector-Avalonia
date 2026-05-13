@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:KatDetector.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="KatDetector.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <StackPanel Spacing="20" HorizontalAlignment="Center" VerticalAlignment="Center">
+      <TextBlock Text="KatDetector - OpenCV listo" 
+                 FontSize="25" 
+                 FontWeight="Bold" 
+                 Foreground="White"/>
+      
+      <StackPanel Orientation="Horizontal" Spacing="10" HorizontalAlignment="Center">
+        <Button Content="1. Seleccionar" Click="OnSelectImageClick" Background="#2196F3"/>
+        <!-- Este es el botón nuevo -->
+        <Button Content="2. Procesar con OpenCV" 
+                Click="OnProcessClick" 
+                Background="#4CAF50" 
+                Foreground="White"
+                Name="BtnProcesar"
+                IsEnabled="False"/> 
+      </StackPanel>
+
+      <Image Name="ImagenMostrada" Width="400" Height="300" Stretch="Uniform" />
+      <Image Name="ImagenProcesada" Width="400" Height="300" Stretch="Uniform" />
+      <TextBlock Name="TxtEstado" Text="Esperando selección..." HorizontalAlignment="Center"/>
+  </StackPanel>
+</UserControl>
